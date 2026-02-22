@@ -1,10 +1,12 @@
 using Microsoft.AspNetCore.Mvc;
 using SearchHotel.API.Application;
+using Asp.Versioning;
 
 namespace SearchHotel.API.Controllers;
 
 [ApiController]
-[Route("api/[controller]")]
+[ApiVersion("1.0")]
+[Route("api/v{version:apiVersion}/[controller]")]
 public class HotelsController : ControllerBase
 {
     private readonly SearchHotelsHandler _handler;
