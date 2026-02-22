@@ -1,11 +1,13 @@
 using Microsoft.AspNetCore.Mvc;
 using Booking.API.Application;
 using Dapr.Client;
+using Asp.Versioning;
 
 namespace Booking.API.Controllers;
 
 [ApiController]
-[Route("api/[controller]")]
+[ApiVersion("1.0")]
+[Route("api/v{version:apiVersion}/[controller]")]
 public class BookingsController : ControllerBase
 {
     private readonly CreateBookingHandler _createHandler;

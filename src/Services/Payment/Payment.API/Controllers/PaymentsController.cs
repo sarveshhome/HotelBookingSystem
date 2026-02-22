@@ -1,11 +1,13 @@
 using Microsoft.AspNetCore.Mvc;
 using Payment.API.Application;
 using Dapr;
+using Asp.Versioning;
 
 namespace Payment.API.Controllers;
 
 [ApiController]
-[Route("api/[controller]")]
+[ApiVersion("1.0")]
+[Route("api/v{version:apiVersion}/[controller]")]
 public class PaymentsController : ControllerBase
 {
     private readonly ProcessPaymentHandler _handler;
