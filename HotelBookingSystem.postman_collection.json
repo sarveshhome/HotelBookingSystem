@@ -1,0 +1,165 @@
+{
+  "info": {
+    "name": "Hotel Booking System",
+    "description": "API collection for Hotel Booking System microservices",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Search Hotels",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/api/hotels/search?city=Mumbai&checkIn=2024-12-01&checkOut=2024-12-05&guests=2",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["api", "hotels", "search"],
+          "query": [
+            {"key": "city", "value": "Mumbai"},
+            {"key": "checkIn", "value": "2024-12-01"},
+            {"key": "checkOut", "value": "2024-12-05"},
+            {"key": "guests", "value": "2"}
+          ]
+        }
+      }
+    },
+    {
+      "name": "Get Room Rates",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/api/rates/{{hotelId}}?checkIn=2024-12-01&checkOut=2024-12-05",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["api", "rates", "{{hotelId}}"],
+          "query": [
+            {"key": "checkIn", "value": "2024-12-01"},
+            {"key": "checkOut", "value": "2024-12-05"}
+          ]
+        }
+      }
+    },
+    {
+      "name": "Create Booking",
+      "request": {
+        "method": "POST",
+        "header": [
+          {"key": "Content-Type", "value": "application/json"}
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"hotelId\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\",\n  \"guestName\": \"John Doe\",\n  \"guestEmail\": \"john@example.com\",\n  \"checkIn\": \"2024-12-01T00:00:00Z\",\n  \"checkOut\": \"2024-12-05T00:00:00Z\",\n  \"guests\": 2,\n  \"totalAmount\": 500\n}"
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/bookings",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["api", "bookings"]
+        }
+      }
+    },
+    {
+      "name": "Get Booking",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/api/bookings/{{bookingId}}",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["api", "bookings", "{{bookingId}}"]
+        }
+      }
+    },
+    {
+      "name": "Process Payment",
+      "request": {
+        "method": "POST",
+        "header": [
+          {"key": "Content-Type", "value": "application/json"}
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"bookingId\": \"{{bookingId}}\",\n  \"amount\": 500,\n  \"paymentMethod\": \"CreditCard\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/payments",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["api", "payments"]
+        }
+      }
+    },
+    {
+      "name": "Check Loyalty Points",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/api/loyalty/john@example.com/points",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["api", "loyalty", "john@example.com", "points"]
+        }
+      }
+    },
+    {
+      "name": "Process Refund",
+      "request": {
+        "method": "POST",
+        "header": [
+          {"key": "Content-Type", "value": "application/json"}
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"bookingId\": \"{{bookingId}}\",\n  \"amount\": 500\n}"
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/refunds",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["api", "refunds"]
+        }
+      }
+    },
+    {
+      "name": "Check Fraud",
+      "request": {
+        "method": "POST",
+        "header": [
+          {"key": "Content-Type", "value": "application/json"}
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"bookingId\": \"{{bookingId}}\",\n  \"amount\": 500\n}"
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/fraud/check",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["api", "fraud", "check"]
+        }
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "hotelId",
+      "value": "3fa85f64-5717-4562-b3fc-2c963f66afa6"
+    },
+    {
+      "key": "bookingId",
+      "value": ""
+    }
+  ]
+}
