@@ -1,0 +1,9 @@
+/Users/sarveshkumar/Practice/NetCore/HotelBookingSystem/src/Services/SearchHotel/SearchHotel.API/obj/Debug/net10.0/SearchHotel.API.csproj.AssemblyReference.cache
+/Users/sarveshkumar/Practice/NetCore/HotelBookingSystem/src/Services/SearchHotel/SearchHotel.API/obj/Debug/net10.0/rpswa.dswa.cache.json
+/Users/sarveshkumar/Practice/NetCore/HotelBookingSystem/src/Services/SearchHotel/SearchHotel.API/obj/Debug/net10.0/SearchHotel.API.GeneratedMSBuildEditorConfig.editorconfig
+/Users/sarveshkumar/Practice/NetCore/HotelBookingSystem/src/Services/SearchHotel/SearchHotel.API/obj/Debug/net10.0/SearchHotel.API.AssemblyInfoInputs.cache
+/Users/sarveshkumar/Practice/NetCore/HotelBookingSystem/src/Services/SearchHotel/SearchHotel.API/obj/Debug/net10.0/SearchHotel.API.AssemblyInfo.cs
+/Users/sarveshkumar/Practice/NetCore/HotelBookingSystem/src/Services/SearchHotel/SearchHotel.API/obj/Debug/net10.0/SearchHotel.API.csproj.CoreCompileInputs.cache
+/Users/sarveshkumar/Practice/NetCore/HotelBookingSystem/src/Services/SearchHotel/SearchHotel.API/obj/Debug/net10.0/SearchHotel.API.MvcApplicationPartsAssemblyInfo.cs
+/Users/sarveshkumar/Practice/NetCore/HotelBookingSystem/src/Services/SearchHotel/SearchHotel.API/obj/Debug/net10.0/SearchHotel.API.MvcApplicationPartsAssemblyInfo.cache
+/Users/sarveshkumar/Practice/NetCore/HotelBookingSystem/src/Services/SearchHotel/SearchHotel.API/obj/Debug/net10.0/SearchHotel.API.sourcelink.json
